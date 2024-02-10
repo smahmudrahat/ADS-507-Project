@@ -45,4 +45,4 @@ The processed datasets can be directly used for various data science projects, i
 Feel free to fork this repository and adapt the preprocessing scripts to your specific needs. Contributions to further improve the scripts or to extend the functionality are welcome.
 
 #### License
-The datasets are subject to IMDb's terms and conditions for non-commercial use. Please refer to [IMDb's Non-Commercial Licensing] (https://developer.imdb.com/non-commercial-datasets/) and [copyright/license] (https://www.imdb.com/conditions) for compliance
+The datasets are subject to IMDb's terms and conditions for non-commercial use. Please refer to [IMDb's Non-Commercial Licensing](https://developer.imdb.com/non-commercial-datasets/) and [copyright/license](https://www.imdb.com/conditions) for compliance
