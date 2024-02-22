@@ -1,37 +1,28 @@
 # ADS-507-Project
 
-## IMDb Dataset Preprocessing
+### Overview
+This repository contains database integration and data preprocessing scripts for storing and organizing information related to movies, streaming platforms, box office details, writers, stars, and directors in a MySQL database.
 
-#### Overview
+### Data Source
+The datasets are available on Kaggle.com and are in CSV formatted files.
 
-This repository contains scripts and information for preprocessing the IMDb datasets for easier use in data science projects and MySQL databases. The original datasets, sourced from IMDb, contain extensive information about movies, TV shows, crew, ratings, and more, but they are presented in a format that can be challenging to work with directly. Our preprocessing steps aim to make these datasets more accessible and user-friendly.
+### Preprocessing
 
-#### Data Source
+1) Multiple CSV files were created into a dataframe for the preprocessing analysis.
+2) The CSV files that were put into a dataframe (df_streaming, df_title, df_director, df_star, df_writer, and df_movie) were read using the pd.read_csv() function from the pandas library. These dataframes contain information about movies, directors, stars, writers, box office details, and streaming platforms.
+3) Database connection parameters, such as db_username, db_password, db_host, and db_database are used to establish a connection to a MySQL database.
+4) MySQL database connection is established using the create_engine function from the SQLAlchemy library.
+5) All the dataframes were inserted into the corresponding MySQL tables using the to_sql method. The function, if_exists='replace' parameter is used to ensure to replace the tables with new data if it already exists.
+6) The structure of each table is defined by SQL statements.
+7) The original datasets used '\N' to denote missing values. These were replaced with NaN (Not a Number) to make them compatible with Pandas for further analysis and processing.
+8) Columns with more than 90% missing values were removed to streamline the datasets. This step enhances the datasets' usability by focusing on more complete and relevant information.
+9) Columns containing multiple categorical values separated by commas were split. Each category now appears in separate rows, aligning with the principles of a relational database.
+10) The processed datasets were saved as new CSV files, preserving their original naming convention with the addition of '_New' to denote the processed state.
 
-The IMDb datasets are available for personal and non-commercial use and can be downloaded from [IMDb Datasets](https://developer.imdb.com/non-commercial-datasets/). These datasets are provided in gzipped, tab-separated-values (TSV) formatted files.
-
-### Preprocessing Steps
-
-1. Conversion from TSV to CSV 
-The original datasets in TSV format were converted to CSV for better compatibility with various data analysis tools and libraries. This was done using a Python script that iterates over each TSV file and writes its contents to a new CSV file.
-
-2. Data Cleaning and Transformation
-The following steps were implemented in Python, primarily using the Pandas library, to clean and transform the data:
-
-a. Truncating Data:
-Each dataset initially contained over 10 million rows, which was cumbersome for analysis. The data was truncated to the first 50,000 rows (5,000 for the title.crew dataset) to make the datasets more manageable.
-
-b. Handling Missing Values:
-The original datasets used '\N' to denote missing values. These were replaced with NaN (Not a Number) to make them compatible with Pandas for further analysis and processing.
-
-c. Removing Unnecessary Columns:
-Columns with more than 90% missing values were removed to streamline the datasets. This step enhances the datasets' usability by focusing on more complete and relevant information.
-
-d. Splitting Categorical Data:
-Columns containing multiple categorical values separated by commas (e.g., genres, knownForTitles) were split. Each category now appears in separate rows, aligning with the principles of a relational database.
-
-3. Saving Processed Data
-The processed datasets were saved as new CSV files, preserving their original naming convention with the addition of '_New' to denote the processed state.
+### File Structure
+Data: Contains CSV files with information on movies, directors, stars, writers, box office details, and streaming platforms.
+Scripts: Contains Python scripts for reading CSV files and inserting data into a MySQL database.
+SQL: Contains SQL scripts for creating database tables.
 
 #### Usage
 The processed datasets can be directly used for various data science projects, including but not limited to:
@@ -45,4 +36,4 @@ The processed datasets can be directly used for various data science projects, i
 Feel free to fork this repository and adapt the preprocessing scripts to your specific needs. Contributions to further improve the scripts or to extend the functionality are welcome.
 
 #### License
-The datasets are subject to IMDb's terms and conditions for non-commercial use. Please refer to [IMDb's Non-Commercial Licensing](https://developer.imdb.com/non-commercial-datasets/) and [copyright/license](https://www.imdb.com/conditions) for compliance
+Creative Commons is the nonprofit behind the open licenses and other legal tools that allow creators to share their work. Our legal tools are free to use. https://creativecommons.org/publicdomain/zero/1.0/
