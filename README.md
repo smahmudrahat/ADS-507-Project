@@ -7,10 +7,15 @@ This repository contains database integration and data preprocessing scripts for
 The datasets are available on Kaggle.com and are in CSV formatted files.
 
 Final_Movie_Industry_kaggle.csv
+
 Final_Movie_streaming_kaggle.csv
+
 Final_director_New.csv
+
 Final_star_New.csv
+
 Final_writer_New.csv
+
 title_movie.basics.csv
 
 ### Preprocessing
