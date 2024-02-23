@@ -4,7 +4,7 @@
 This repository contains database integration and data preprocessing scripts for storing and organizing information related to movies, streaming platforms, box office details, writers, stars, and directors in a MySQL database.
 
 ### Data Source
-The datasets are available on Kaggle.com and are in CSV formatted files.
+The datasets are available on Kaggle.com and the IMDb developer website and are in CSV formatted files.
 
 Final_Movie_Industry_kaggle.csv
 
