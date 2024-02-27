@@ -1,7 +1,7 @@
 # ADS-507-Project
 
 ### Overview
-This repository contains database integration and data preprocessing scripts for storing and organizing information related to movies, streaming platforms, box office details, writers, stars, and directors in a MySQL database.
+This repository contains database integration and data preprocessing scripts for storing and organizing information related to movies, streaming platforms, box office details, writers, stars, and directors in a MySQL database. It also contains how the pipeline will be deployed and monitored.
 
 ### Data Source
 The datasets are available on Kaggle.com and the IMDb developer website and are in CSV formatted files.
@@ -43,6 +43,9 @@ The processed datasets can be directly used for various data science projects, i
 - Building recommendation systems
 - Analyzing trends in the film and television industry
 - They are also structured to be compatible with MySQL, making them suitable for database-related projects and learning exercises.
+
+#### Deployment and Monitoring Pipeline
+After successfully developing and testing the film industry data analysis pipeline, the next phase involves deploying it on a cloud service for enhanced scalability, accessibility, and reliability. This deployment, on platforms like Azure or AWS, offers advantages such as efficient resource utilization, collaborative work, and seamless user performance. Key steps include careful planning of the deployment strategy, choosing between Azure or AWS based on project needs, expertise, and budget considerations. Implementing robust security measures, including access controls and encryption, is crucial to safeguard sensitive data. These steps aim to transition the project into a cloud-deployed, scalable, and robust data pipeline, contributing to more informed decision-making processes and an improved user experience.
 
 #### Contribution
 Feel free to fork this repository and adapt the preprocessing scripts to your specific needs. Contributions to further improve the scripts or to extend the functionality are welcome.
